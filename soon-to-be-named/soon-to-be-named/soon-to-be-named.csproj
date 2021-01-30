@@ -173,11 +173,23 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202101301101339_InitialCreate.cs" />
+    <Compile Include="Migrations\202101301101339_InitialCreate.Designer.cs">
+      <DependentUpon>202101301101339_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101301852558_CreatePost.cs" />
+    <Compile Include="Migrations\202101301852558_CreatePost.Designer.cs">
+      <DependentUpon>202101301852558_CreatePost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Entities\CommentEntity.cs" />
+    <Compile Include="Models\Entities\PostEntity.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="WebSiteDBContext.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -251,6 +263,14 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101301101339_InitialCreate.resx">
+      <DependentUpon>202101301101339_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101301852558_CreatePost.resx">
+      <DependentUpon>202101301852558_CreatePost.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

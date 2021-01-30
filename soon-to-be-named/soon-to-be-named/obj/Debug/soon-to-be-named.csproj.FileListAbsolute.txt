@@ -106,3 +106,6 @@ F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon-to-b
 F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon-to-be-named.csproj.CopyComplete
 F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon-to-be-named.dll
 F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon-to-be-named.pdb
+F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon_to_be_named.Migrations.InitialCreate.resources
+F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon-to-be-named.csproj.GenerateResource.cache
+F:\web_project\web_project\soon-to-be-named\soon-to-be-named\obj\Debug\soon_to_be_named.Migrations.CreatePost.resources
