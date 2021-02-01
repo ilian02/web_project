@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Entities;
+using WebSite.Models;
 using WebSite.Servises;
 
 namespace WebSite.Controllers
@@ -27,19 +28,19 @@ namespace WebSite.Controllers
         }
 
         [HttpPost("/Create/Post")]
-        public async Task<IActionResult> CreatePost(PostEntity post)
+        public async Task<IActionResult> CreatePost(PostModel postModel)
         {
 
-            bool result = await this.postServise.CreatePost(post);
+            bool result = await this.postServise.CreatePost(postModel);
 
             return Redirect("/");
         }
 
         [HttpPost("/Create/Comment")]
-        public async Task<IActionResult> CreateComment(PostEntity post)
+        public async Task<IActionResult> CreateComment(CommentModel commentModel)
         {
 
-            bool result = await this.postServise.CreatePost(post);
+            bool result = await this.postServise.CreatePost(commentModel);
 
             return Redirect("/");
         }

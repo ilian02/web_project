@@ -6,6 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Data;
 using WebApplication1.Entities;
+using WebSite.Models;
 
 namespace WebSite.Servises
 {
@@ -18,18 +19,38 @@ namespace WebSite.Servises
             this.AppDbContext = appDbContext;
         }
 
-        public async Task<bool> CreatePost(PostEntity post)
+        public async Task<bool> CreatePost(PostModel postModel)
         {
-            bool result = await this.AppDbContext.AddAsync(post) != null;
+            PostEntity postEntity = new PostEntity
+            {
+                Title = postModel.Title,
+                PosterName = postModel.PosterName,
+                ImageURL = postModel.ImageURL,
+                Description = postModel.Description,
+                Stars = postModel.Stars,
+                Date = DateTime.Now
+            };
+
+
+            bool result = await this.AppDbContext.AddAsync(postEntity) != null;
 
             await this.AppDbContext.SaveChangesAsync();
 
             return result;
         }
 
-        public async Task<bool> CreateComment(CommentEntity post)
+        public async Task<bool> CreateComment(CommentModel commentModel)
         {
-            bool result = await this.AppDbContext.AddAsync(post) != null;
+            CommentEntity commentEntity = new CommentEntity
+            {
+                Description = commentModel.Description,
+                PosterName = commentModel.PosterName,
+                Stars = commentModel.Stars,
+                Date = DateTime.Now
+            };
+
+
+            bool result = await this.AppDbContext.AddAsync(commentEntity) != null;
 
             await this.AppDbContext.SaveChangesAsync();
 
