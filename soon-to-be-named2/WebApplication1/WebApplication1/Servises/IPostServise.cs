@@ -10,6 +10,6 @@ namespace WebSite.Servises
     public interface IPostServise
     {
         Task<bool> CreatePost(PostModel postModel);
-        Task<bool> CreatePost(CommentModel commentModel);
+        Task<bool> CreateComment(CommentModel commentModel);
     }
 }

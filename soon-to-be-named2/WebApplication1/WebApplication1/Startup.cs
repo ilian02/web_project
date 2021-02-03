@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using WebApplication1.Data;
+using WebSite.Servises;
 
 namespace WebApplication1
 {
@@ -31,6 +32,8 @@ namespace WebApplication1
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
+
+            services.AddTransient<IPostServise, PostServise>();
 
             services.Configure<IdentityOptions>(options =>
             {

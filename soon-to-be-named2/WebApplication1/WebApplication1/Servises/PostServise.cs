@@ -10,7 +10,7 @@ using WebSite.Models;
 
 namespace WebSite.Servises
 {
-    public class PostServise : Controller
+    public class PostServise : IPostServise
     {
         private readonly ApplicationDbContext AppDbContext;
 
