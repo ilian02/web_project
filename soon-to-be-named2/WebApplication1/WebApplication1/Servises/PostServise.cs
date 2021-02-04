@@ -19,6 +19,30 @@ namespace WebSite.Servises
             this.AppDbContext = appDbContext;
         }
 
+        public List<PostModel> GetAllPosts()
+        {
+            var entities = AppDbContext.Posts.OrderByDescending(c => c.Date).ToList();
+
+            List<PostModel> result = new List<PostModel>();
+
+            foreach (PostEntity post in entities)
+            {
+                PostModel postModel = new PostModel
+                {
+                    Title = post.Title,
+                    PosterName = post.PosterName,
+                    Description = post.Description,
+                    Date = post.Date,
+                    Stars = post.Stars,
+                    ImageURL = post.ImageURL
+                };
+
+                result.Add(postModel);
+            }
+
+            return result;
+        }
+
         public async Task<bool> CreatePost(PostModel postModel)
         {
             PostEntity postEntity = new PostEntity

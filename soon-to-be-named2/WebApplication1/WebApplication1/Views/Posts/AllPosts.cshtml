@@ -1,0 +1,54 @@
+﻿@model IEnumerable<WebSite.Models.PostModel>
+
+@{
+    ViewData["Title"] = "AllPostsView";
+}
+
+<h1>AllPostsView</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PosterName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stars)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                <img src = @Html.DisplayFor(modelItem => item.ImageURL)>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PosterName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stars)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

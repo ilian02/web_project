@@ -166,3 +166,4 @@ F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj
 F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\ConfirmEmail.cshtml.g.cs
 F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Areas\Identity\Pages\Account\RegisterConfirmation.cshtml.g.cs
 F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Views\Posts\CreatePost.cshtml.g.cs
+F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Views\Posts\AllPosts.cshtml.g.cs

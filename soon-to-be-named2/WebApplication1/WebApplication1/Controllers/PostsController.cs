@@ -24,6 +24,15 @@ namespace WebSite.Controllers
             this.userManager = userManager;
         }
 
+        [HttpGet]
+        public IActionResult AllPosts()
+        {
+            List <PostModel> postModels = postServise.GetAllPosts();
+
+            return View(postModels);
+        }
+
+
         [Authorize]
         [HttpGet]
         public IActionResult CreatePost()
@@ -37,7 +46,6 @@ namespace WebSite.Controllers
 
             var user = await userManager.GetUserAsync(HttpContext.User);
             postModel.PosterName = user.UserName;
-            postModel.Stars = 5;
 
             bool result = await this.postServise.CreatePost(postModel);
 

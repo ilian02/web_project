@@ -12,6 +12,7 @@ namespace WebSite.Models
         public int PostID { get; set; }
         public String Title { get; set; }
         public String ImageURL { get; set; }
+        public DateTime Date { get; set; }
         public String PosterName { get; set; }
         public String Description { get; set; }
         public double Stars { get; set; }
