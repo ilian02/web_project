@@ -10,7 +10,6 @@ namespace WebApplication1.Entities
     {
         [Key]
         public int ID { get; set; }
-        public int PostID { get; set; }
         public DateTime Date { get; set; }
         public String Title { get; set; }
         public String ImageURL { get; set; }

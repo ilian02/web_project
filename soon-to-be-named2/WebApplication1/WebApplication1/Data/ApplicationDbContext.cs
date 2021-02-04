@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using WebApplication1.Entities;
+using WebSite.Models;
 
 namespace WebApplication1.Data
 {
@@ -16,5 +17,6 @@ namespace WebApplication1.Data
 
         public DbSet<CommentEntity> Comments { get; set; }
         public DbSet<PostEntity> Posts { get; set; }
+        public DbSet<WebSite.Models.PostModel> PostModel { get; set; }
     }
 }
