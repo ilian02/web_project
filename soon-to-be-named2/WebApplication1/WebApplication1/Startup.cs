@@ -77,7 +77,7 @@ namespace WebApplication1
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Posts}/{action=AllPosts}/{id?}");
                 endpoints.MapRazorPages();
             });
         }
