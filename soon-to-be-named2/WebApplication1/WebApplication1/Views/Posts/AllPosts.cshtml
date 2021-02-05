@@ -11,13 +11,38 @@
             <div class="col-8">
                 <div class="post-user-info">
                     <p class="post-title">
-                    @Html.DisplayFor(modelItem => item.Title)
+                        @Html.DisplayFor(modelItem => item.Title)
                     </p>
                     <p class="post-user-name">
                         posted by: @Html.DisplayFor(modelItem => item.PosterName)
                     </p>
                     <p class="post-description">
+                        Description: <br>
                         @Html.DisplayFor(modelItem => item.Description)
+                    </p>
+                    <p class="post-stars">
+                        @if (item.Stars == 1)
+                        {
+                            <img class="post-stars" src= "~/images/1star.png" >
+                        }
+                        @if (item.Stars == 2)
+                        {
+                            <img class="post-stars" src="~/images/2stars.png">
+                        }
+                        @if (item.Stars == 3)
+                        {
+                            <img class="post-stars" src="~/images/3stars.png">
+                        }
+                        @if (item.Stars == 4)
+                        {
+                            <img class="post-stars" src="~/images/4stars.png">
+                        }
+                        @if (item.Stars == 5)
+                        {
+                            <img class="post-stars" src="~/images/5stars.png">
+                        }
+
+
                     </p>
                 </div>
             </div>
