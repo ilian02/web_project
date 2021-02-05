@@ -1,23 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Csv\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj": {}
+    "F:\\web_project\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj": {}
   },
   "projects": {
-    "D:\\Csv\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj": {
+    "F:\\web_project\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Csv\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj",
+        "projectUniqueName": "F:\\web_project\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj",
         "projectName": "WebSite",
-        "projectPath": "D:\\Csv\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj",
-        "packagesPath": "C:\\Users\\АлександърДиманачки\\.nuget\\packages\\",
-        "outputPath": "D:\\Csv\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\obj\\",
+        "projectPath": "F:\\web_project\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\WebSite.csproj",
+        "packagesPath": "C:\\Users\\pc\\.nuget\\packages\\",
+        "outputPath": "F:\\web_project\\web_project\\soon-to-be-named2\\WebApplication1\\WebApplication1\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\АлександърДиманачки\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pc\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
