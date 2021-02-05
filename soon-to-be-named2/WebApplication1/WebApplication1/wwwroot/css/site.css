@@ -103,3 +103,22 @@ body {
 .post-description{
 
 }
+
+
+.content-container {
+    width: 80%;
+    height: 200px;
+}
+
+.left-content {
+    width: 45%;
+    height: 200px;
+    float: left;
+    border: solid;
+}
+
+.right-content {
+    margin-left: 30%;
+    height: 200px;
+    float: right;
+}

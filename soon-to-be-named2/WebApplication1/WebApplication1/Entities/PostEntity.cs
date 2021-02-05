@@ -11,10 +11,14 @@ namespace WebApplication1.Entities
         [Key]
         public int ID { get; set; }
         public DateTime Date { get; set; }
+        [Required]
         public String Title { get; set; }
+        [Required]
         public String ImageURL { get; set; }
         public String PosterName { get; set; }
+        [Required]
         public String Description { get; set; }
+        [Required]
         public double Stars { get; set; }
     }
 }

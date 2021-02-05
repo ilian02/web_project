@@ -10,8 +10,10 @@
         <div class="row border">
             <div class="col-8">
                 <div class="post-user-info">
+                    
+
                     <p class="post-title">
-                        @Html.DisplayFor(modelItem => item.Title)
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Posts" asp-action="GetPost" asp-route-id="@item.PostID">@Html.DisplayFor(modelItem => item.Title)</a>
                     </p>
                     <p class="post-user-name">
                         posted by: @Html.DisplayFor(modelItem => item.PosterName)

@@ -40,6 +40,14 @@ namespace WebSite.Controllers
             return View();
         }
 
+        public IActionResult GetPost(int id)
+        {
+            PostModel post = postServise.GetPost(id);
+
+
+            return View(post);
+        }
+
         public async Task<IActionResult> CreatePost(PostModel postModel)
         {
 

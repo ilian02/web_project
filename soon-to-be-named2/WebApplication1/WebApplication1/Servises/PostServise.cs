@@ -19,6 +19,26 @@ namespace WebSite.Servises
             this.AppDbContext = appDbContext;
         }
 
+        [HttpGet]
+        [Route("Posts/GetPost/{id:int}")]
+        public PostModel GetPost([FromQuery (Name = "id")] int id = 1)
+        {
+            PostEntity postEntity = AppDbContext.Posts.Find(id);
+
+            PostModel result = new PostModel
+            {
+                    PostID = postEntity.ID,
+                    Title = postEntity.Title,
+                    PosterName = postEntity.PosterName,
+                    Description = postEntity.Description,
+                    Date = postEntity.Date,
+                    Stars = postEntity.Stars,
+                    ImageURL = postEntity.ImageURL
+            };
+
+            return result;
+        }
+
         public List<PostModel> GetAllPosts()
         {
             var entities = AppDbContext.Posts.OrderByDescending(c => c.Date).ToList();
@@ -29,6 +49,7 @@ namespace WebSite.Servises
             {
                 PostModel postModel = new PostModel
                 {
+                    PostID = post.ID,
                     Title = post.Title,
                     PosterName = post.PosterName,
                     Description = post.Description,
