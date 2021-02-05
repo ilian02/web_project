@@ -40,7 +40,6 @@ namespace WebSite.Controllers
             return View();
         }
 
-        [HttpPost("/Create/Post")]
         public async Task<IActionResult> CreatePost(PostModel postModel)
         {
 
@@ -59,7 +58,6 @@ namespace WebSite.Controllers
             return View();
         }
 
-        [HttpPost("/Create/Comment")]
         public async Task<IActionResult> CreateComment(CommentModel commentModel)
         {
 
