@@ -76,3 +76,22 @@ body {
 /*img {
     display: block;
 }*/
+
+.post-image{
+    width: 250px;
+}
+
+.post-title{
+    font-weight: 400;
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
+
+.post-user-name{
+    font-weight: 100;
+    margin-bottom: 25px;
+}
+
+.navbar {
+    margin-bottom: 0
+}

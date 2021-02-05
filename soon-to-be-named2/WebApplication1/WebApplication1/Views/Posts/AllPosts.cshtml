@@ -4,49 +4,26 @@
     ViewData["Title"] = "AllPostsView";
 }
 
-
-
-
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageURL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PosterName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stars)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                <img src = @Html.DisplayFor(modelItem => item.ImageURL)>
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PosterName)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Stars)
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<div class="container">
+    @foreach (var item in Model)
+    {
+        <div class="row border">
+            <div class="col-8">
+                <div class="post-user-info">
+                    <p class="post-title">
+                    @Html.DisplayFor(modelItem => item.Title)
+                    </p>
+                    <p class="post-user-name">
+                        posted by: @Html.DisplayFor(modelItem => item.PosterName)
+                    </p>
+                    <p class="post-description">
+                        @Html.DisplayFor(modelItem => item.Description)
+                    </p>
+                </div>
+            </div>
+            <div class="col-4">
+                <img class="post-image" src=@Html.DisplayFor(modelItem => item.ImageURL)>
+            </div>
+        </div>
+    }
+</div>
