@@ -19,6 +19,26 @@ namespace WebSite.Servises
             this.AppDbContext = appDbContext;
         }
 
+        [HttpGet]
+        [Route("Posts/GetPost/{id:int}")]
+        public PostModel GetPost([FromQuery (Name = "id")] int id = 1)
+        {
+            PostEntity postEntity = AppDbContext.Posts.Find(id);
+
+            PostModel result = new PostModel
+            {
+                    PostID = postEntity.ID,
+                    Title = postEntity.Title,
+                    PosterName = postEntity.PosterName,
+                    Description = postEntity.Description,
+                    Date = postEntity.Date,
+                    Stars = postEntity.Stars,
+                    ImageURL = postEntity.ImageURL
+            };
+
+            return result;
+        }
+
         public List<PostModel> GetAllPosts()
         {
             var entities = AppDbContext.Posts.OrderByDescending(c => c.Date).ToList();
@@ -29,6 +49,7 @@ namespace WebSite.Servises
             {
                 PostModel postModel = new PostModel
                 {
+                    PostID = post.ID,
                     Title = post.Title,
                     PosterName = post.PosterName,
                     Description = post.Description,
@@ -67,6 +88,7 @@ namespace WebSite.Servises
         {
             CommentEntity commentEntity = new CommentEntity
             {
+                PostID = commentModel.PostID,
                 Description = commentModel.Description,
                 PosterName = commentModel.PosterName,
                 Stars = commentModel.Stars,
@@ -81,5 +103,28 @@ namespace WebSite.Servises
             return result;
         }
 
+
+        public List<CommentModel> GetPostComments(int id)
+        {
+            var entities = AppDbContext.Comments.Where(c => c.PostID == id).OrderByDescending(c => c.Date).ToList();
+
+            List<CommentModel> result = new List<CommentModel>();
+
+            foreach (CommentEntity comment in entities)
+            {
+                CommentModel commentModel = new CommentModel
+                {
+                    ID = comment.ID,
+                    PosterName = comment.PosterName,
+                    Description = comment.Description,
+                    PostID = comment.PostID
+                    
+                };
+
+                result.Add(commentModel);
+            }
+
+            return result;
+        }
     }
 }

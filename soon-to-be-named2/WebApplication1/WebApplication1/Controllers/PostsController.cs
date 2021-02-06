@@ -40,6 +40,14 @@ namespace WebSite.Controllers
             return View();
         }
 
+        public IActionResult GetPost(int id)
+        {
+            PostModel post = postServise.GetPost(id);
+
+
+            return View(post);
+        }
+
         public async Task<IActionResult> CreatePost(PostModel postModel)
         {
 
@@ -60,12 +68,16 @@ namespace WebSite.Controllers
 
         public async Task<IActionResult> CreateComment(CommentModel commentModel)
         {
-
-
             bool result = await this.postServise.CreateComment(commentModel);
 
             return Redirect("/");
         }
 
+        public PartialViewResult GetComments(int id)
+        {
+            List<CommentModel> comments = postServise.GetPostComments(id);
+
+            return PartialView("GetComments", comments);
+        }
     }
 }
