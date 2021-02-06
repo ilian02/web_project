@@ -19,6 +19,6 @@ namespace WebApplication1.Entities
         [Required]
         public String Description { get; set; }
         [Required]
-        public double Stars { get; set; }
+        public int Stars { get; set; }
     }
 }

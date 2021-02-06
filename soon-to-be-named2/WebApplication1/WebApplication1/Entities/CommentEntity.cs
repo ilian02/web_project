@@ -13,7 +13,7 @@ namespace WebApplication1.Entities
         public DateTime Date { get; set; }
         public String PosterName { get; set; }
         public String Description { get; set; }
-        public double Stars { get; set; }
+        public int Stars { get; set; }
         public int PostID { get; set; }
     }
 }

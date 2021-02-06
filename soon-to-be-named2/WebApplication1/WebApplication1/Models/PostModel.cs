@@ -10,15 +10,11 @@ namespace WebSite.Models
     {
         [Key]
         public int PostID { get; set; }
-        [StringLength(1000, ErrorMessage = "Limit yourself to 100 lenght")]
-
         public String Title { get; set; }
         public String ImageURL { get; set; }
         public DateTime Date { get; set; }
         public String PosterName { get; set; }
-        [StringLength(250, ErrorMessage = "Limit yourself to 250 lenght")]
         public String Description { get; set; }
-        [Range(1, 5, ErrorMessage = "Between 1 to 5")]
-        public double Stars { get; set; }
+        public int Stars { get; set; }
     }
 }

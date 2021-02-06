@@ -66,7 +66,7 @@ namespace WebSite.Servises
 
         [HttpPost]
         public async Task<bool> CreatePost(PostModel postModel)
-        {
+        { 
             PostEntity postEntity = new PostEntity
             {
                 Title = postModel.Title,
