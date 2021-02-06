@@ -59,5 +59,7 @@
 </table>
 
 <div>
-    <!--<partial name="GetComments.cshtml"/>-->
+    @await Component.InvokeAsync("getComments", new { id = Model.PostID })
+    <hr>
+    @await Component.InvokeAsync("createNewComment", new { postID = Model.PostID })
 </div>

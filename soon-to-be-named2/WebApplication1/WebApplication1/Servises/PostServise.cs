@@ -64,6 +64,7 @@ namespace WebSite.Servises
             return result;
         }
 
+        [HttpPost]
         public async Task<bool> CreatePost(PostModel postModel)
         {
             PostEntity postEntity = new PostEntity
@@ -117,7 +118,8 @@ namespace WebSite.Servises
                     ID = comment.ID,
                     PosterName = comment.PosterName,
                     Description = comment.Description,
-                    PostID = comment.PostID
+                    PostID = comment.PostID,
+                    Stars = comment.Stars
                     
                 };
 
