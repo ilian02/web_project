@@ -88,6 +88,7 @@ namespace WebSite.Servises
         {
             CommentEntity commentEntity = new CommentEntity
             {
+                PostID = commentModel.PostID,
                 Description = commentModel.Description,
                 PosterName = commentModel.PosterName,
                 Stars = commentModel.Stars,
@@ -102,5 +103,28 @@ namespace WebSite.Servises
             return result;
         }
 
+
+        public List<CommentModel> GetPostComments(int id)
+        {
+            var entities = AppDbContext.Comments.Where(c => c.PostID == id).OrderByDescending(c => c.Date).ToList();
+
+            List<CommentModel> result = new List<CommentModel>();
+
+            foreach (CommentEntity comment in entities)
+            {
+                CommentModel commentModel = new CommentModel
+                {
+                    ID = comment.ID,
+                    PosterName = comment.PosterName,
+                    Description = comment.Description,
+                    PostID = comment.PostID
+                    
+                };
+
+                result.Add(commentModel);
+            }
+
+            return result;
+        }
     }
 }

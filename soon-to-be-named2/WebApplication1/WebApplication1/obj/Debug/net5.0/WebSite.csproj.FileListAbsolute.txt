@@ -335,3 +335,5 @@ D:\Csv\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\n
 D:\Csv\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\WebSite.pdb
 D:\Csv\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\WebSite.genruntimeconfig.cache
 F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Views\Posts\GetPost.cshtml.g.cs
+F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Views\Posts\GetComments.cshtml.g.cs
+F:\web_project\web_project\soon-to-be-named2\WebApplication1\WebApplication1\obj\Debug\net5.0\Razor\Views\Posts\CreateComment.cshtml.g.cs

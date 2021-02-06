@@ -14,5 +14,6 @@ namespace WebApplication1.Entities
         public String PosterName { get; set; }
         public String Description { get; set; }
         public double Stars { get; set; }
+        public int PostID { get; set; }
     }
 }

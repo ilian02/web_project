@@ -9,9 +9,11 @@ namespace WebSite.Models
     public class CommentModel
     {
         [Key]
+        public int ID { get; set; }
         public String PosterName { get; set; }
         public String Description { get; set; }
         public double Stars { get; set; }
+        public int PostID { get; set; }
     }
 }
 
