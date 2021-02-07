@@ -28,7 +28,7 @@
                 <p class="post-info">@Html.DisplayFor(model => model.Description)</p>
             </td>
             <td>
-                <div class="center-50"><img class="post-image" src=@Html.DisplayFor(model => model.ImageURL)></div>
+                <div><img class="post-image" src=@Html.DisplayFor(model => model.ImageURL)></div>
             </td>
 
         </tr>
@@ -64,7 +64,6 @@
 </table>
 
 <div style="margin-top:90px">
-    <p>Comments</p>
     @await Component.InvokeAsync("getComments", new { id = Model.PostID })
     <hr>
     @if (SignInManager.IsSignedIn(User))
